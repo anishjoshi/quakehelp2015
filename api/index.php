@@ -9,7 +9,5 @@
 	include 'dao/dao.php';
 
 	$incidents = new Incidents();
-
-
 	echo json_encode($incidents->getAll());
 

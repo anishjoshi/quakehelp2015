@@ -5,7 +5,7 @@ class Incidents {
 	public function Incidents(){
 		$this->_incidents = array();
 		$apicall = new ApiCurl();
-	 	$response = $apicall->getRequest('http://parakhi.com.np/api?task=incidents');
+	 	$response = $apicall->getRequest('http://parakhi.com.np/api?task=incidents&limit=30');
 	 	$jsonresponse = json_decode($response);
 	 	$incidents = $jsonresponse->payload->incidents;
 	 	foreach ($incidents as $inc) {
